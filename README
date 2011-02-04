@@ -1,0 +1,3 @@
+AltTranslateChrome is a Chrome Extension for translating through Google Translation API on the fly.
+It sends words selected while pressing alt key to the API, and the translation appears in a popup balloon.
+This is a derivation product of AltTranslate for Safari. See also https://github.com/Tanusai/AltTranslate
