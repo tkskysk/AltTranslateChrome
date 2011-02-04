@@ -92,7 +92,9 @@ function waitForClick(){
 				//to hide baloon
 				bln_body.addEventListener( 'mouseout', hideBaloonHandler);
 				bln_body.addEventListener( 'mouseup', eventKiller);//ignore clicking on baloon.
+				bln_body.addEventListener( 'mousedown', eventKiller);//ignore clicking on baloon.
 				window.addEventListener( 'mouseup', hideBaloonHandler);
+				window.addEventListener( 'mousedown', hideBaloonHandler);
 				sendWord( text );
 			}
 		}
@@ -101,8 +103,10 @@ function waitForClick(){
 
 function hideBaloonHandler( e ){
 	bln_body.removeEventListener( 'mouseout', hideBaloonHandler );
-	bln_body.removeEventListener( 'mouseup', eventKiller)
+	bln_body.removeEventListener( 'mouseup', eventKiller);
+	bln_body.removeEventListener( 'mousedown', eventKiller)
 	window.removeEventListener( 'mouseup', hideBaloonHandler);
+	window.removeEventListener( 'mousedown', hideBaloonHandler);
 	bln.className = 'altrans_bln_disappear';
 	lastSearch = "";
 	setTimeout(function(){
